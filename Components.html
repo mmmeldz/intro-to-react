@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Components</title>
+  </head>
+  <body>
+
+    <header id="app"></header>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <script type="text/babel">
+
+    class WelcomeGreeting extends React.Component {
+      constructor(props){
+           super(props);
+           this.state = {
+             number: 4
+           }
+         }
+        render () {
+        return (
+          <header>
+          <h1> Welcome {this.props.name}!</h1>
+          <h2> Have a {this.props.status}! </h2>
+          <h3> React Checkpoint {this.state.number}</h3>
+          </header>
+
+        );
+      }
+    }
+
+    ReactDOM.render(
+    <WelcomeGreeting name="Melissa Mendez" status="Good day"/>, document.getElementById('app')
+    );
+
+    </script>
+   </body>
+  </html>
